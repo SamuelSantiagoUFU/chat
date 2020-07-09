@@ -33,7 +33,7 @@
       $('#chat').submit((e) => {
         e.preventDefault()
         var message = $('input[name=message]').val()
-        if (author.length && message.length) {
+        if (message.length) {
           var messageObj = {
             message: message,
             class: 'me'
