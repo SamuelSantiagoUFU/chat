@@ -35,6 +35,7 @@
             class: 'me'
           }
           renderMessage(messageObj)
+          $('input[name=message]').val("");
           socket.emit('send', messageObj)
         }
       })
