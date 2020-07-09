@@ -15,6 +15,7 @@
       <input type="text" name="message" placeholder="Digite a mensagem">
       <button type="submit">Enviar</button>
     </form>
+    <audio src="/audio/newMessage.ogg"></audio>
     <script type="text/javascript">
       var socket = io('https://still-reaches-68501.herokuapp.com')
 
@@ -24,6 +25,8 @@
 
       socket.on('receivedMessage', message => {
         renderMessage(message)
+        const audio = document.querySelector('audio')
+        audio.play();
       })
 
       $('#chat').submit((e) => {
