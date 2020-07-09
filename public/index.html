@@ -11,7 +11,6 @@
   </head>
   <body>
     <form id="chat" autocomplete="off">
-      <input type="text" name="username" placeholder="Digite seu usuário">
       <div class="messages"></div>
       <input type="text" name="message" placeholder="Digite a mensagem">
       <button type="submit">Enviar</button>
@@ -29,11 +28,9 @@
 
       $('#chat').submit((e) => {
         e.preventDefault()
-        var author = $('input[name=username]').val()
         var message = $('input[name=message]').val()
         if (author.length && message.length) {
           var messageObj = {
-            author: author,
             message: message,
             class: 'me'
           }
